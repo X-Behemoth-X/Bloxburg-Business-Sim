@@ -1,0 +1,10 @@
+public class Business {
+  private String name;
+  private String owner;
+  private double funds;
+  private static int total Business = 0;
+  public static final double TAX_RATE  = 0.1;
+
+  public Business(String name, String owner, double funds) {
+    this.name = name;
+    
