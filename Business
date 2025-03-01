@@ -7,4 +7,25 @@ public class Business {
 
   public Business(String name, String owner, double funds) {
     this.name = name;
-    
+    this.owner = owner;
+    this.funds = funds;
+    totalBusiness++;
+}
+  public Business(String name, double funds) {
+    this(name, "Unknown", funds);
+}
+  public business(String name) {
+    this(name, "Unknown", 1000);
+}
+  public void payTaxes() {
+    double taxes = funds * TAX_RATE;
+    funds -=taxes;
+}
+
+  public void hireEmployee(String name, String role, double salary) {
+    Employee employee = new Employee(name, role, salary);
+    System.out.println("Employee: " + employee.name + " | Role: " + employee.role + " | Salary: $" + employee.salary + "/hour");
+}
+
+  public void printBusinessDetails() {
+    System.out.println
