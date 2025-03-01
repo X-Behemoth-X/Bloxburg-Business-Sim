@@ -28,4 +28,43 @@ public class Business {
 }
 
   public void printBusinessDetails() {
-    System.out.println
+    System.out.println("Business: " + name);
+    System.out.println("Owner: " + owner);
+    System.out.println("funds before taves: $" + (funds / (1 - TAX_RATE)));
+    payTaxes();
+    System.out.println("Funds after taxes: $" + funds);
+    System.out.println();
+}
+
+  class Employee{
+    private String name;
+    private String role;
+    Private double salary;
+
+    public Employee(String name, String role, double salary) {
+      this.name = name;
+      this.role = role;
+      this.salary = salary;
+}
+
+public void printEmployeeDetails() {
+      System.out.println("Employee: " + name + " | Role: " + role + " | Salary: $" + salary + "/hour");
+  }
+}
+
+public static int getTotalBusiness() {
+    return totalBusiness;
+}
+
+public String getName() {
+    return name;
+}
+
+public String getOwner() {
+        return owner;
+    }
+
+    public double getFunds() {
+        return funds;
+    }
+}
