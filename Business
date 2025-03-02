@@ -79,8 +79,8 @@ public String getOwner()
   {
         return owner;
     }
-}
-    public double getFunds() {
+    public double getFunds() 
+  {
         return funds;
     }
 }
