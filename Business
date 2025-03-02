@@ -1,69 +1,85 @@
-public class Business {
+public class Business 
+{
   private String name;
   private String owner;
   private double funds;
   private static int total Business = 0;
   public static final double TAX_RATE  = 0.1;
 
-  public Business(String name, String owner, double funds) {
+  public Business(String name, String owner, double funds) 
+  {
     this.name = name;
     this.owner = owner;
     this.funds = funds;
     totalBusiness++;
-}
-  public Business(String name, double funds) {
+  }
+
+  public Business(String name, double funds) 
+  {
     this(name, "Unknown", funds);
-}
-  public business(String name) {
+  }
+
+  public business(String name) 
+  {
     this(name, "Unknown", 1000);
-}
-  public void payTaxes() {
+  }
+
+  public void payTaxes() 
+  {
     double taxes = funds * TAX_RATE;
     funds -=taxes;
-}
+  }
 
-  public void hireEmployee(String name, String role, double salary) {
+  public void hireEmployee(String name, String role, double salary) 
+  {
     Employee employee = new Employee(name, role, salary);
     System.out.println("Employee: " + employee.name + " | Role: " + employee.role + " | Salary: $" + employee.salary + "/hour");
-}
+  }
 
-  public void printBusinessDetails() {
+  public void printBusinessDetails() 
+  {
     System.out.println("Business: " + name);
     System.out.println("Owner: " + owner);
     System.out.println("funds before taves: $" + (funds / (1 - TAX_RATE)));
     payTaxes();
     System.out.println("Funds after taxes: $" + funds);
     System.out.println();
-}
+  }
 
-  class Employee{
+  class Employee
+  {
     private String name;
     private String role;
     Private double salary;
 
-    public Employee(String name, String role, double salary) {
+    public Employee(String name, String role, double salary) 
+      {
       this.name = name;
       this.role = role;
       this.salary = salary;
-}
+      }
 
-public void printEmployeeDetails() {
+public void printEmployeeDetails()
+    {
       System.out.println("Employee: " + name + " | Role: " + role + " | Salary: $" + salary + "/hour");
+    }
   }
-}
 
-public static int getTotalBusiness() {
+public static int getTotalBusiness() 
+  {
     return totalBusiness;
-}
+  }
 
-public String getName() {
+public String getName()
+  {
     return name;
-}
+  }
 
-public String getOwner() {
+public String getOwner() 
+  {
         return owner;
     }
-
+}
     public double getFunds() {
         return funds;
     }
