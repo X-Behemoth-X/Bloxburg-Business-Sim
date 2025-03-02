@@ -1,0 +1,34 @@
+public class BloxburgGame 
+{ 
+  public static void main(String[] args)
+  {
+    system.out.println("Welcome to Bloxburg Business Simulator...");
+
+    Business tacoPlace = new Business("Tony's Tacos", "Tony", 7500);
+    Business sushiPlace = new Business("Sushi Palace", "Kevin", 10000);
+
+    System.out.println("Total business created: " + Business.getTotalBusinesses());
+    System.out.println();
+
+    System.out.println("Business: " + tacoPlace.getName());
+    System.out.println("Owner: " + tacoPlace.getOwner());
+    System.out.println("Funds before taxes: $" + tacoPlace.getFunds());
+    System.out.println();
+    System.out.println("Funds after taxes: " + tacoPlace.getFunds());
+    System.out.println();
+
+    Business.Employee tacoEmployee = tacoPlace.new Employee("Karl", "Cook", 18);
+    tacoEmployee.printEmployeeDetails();
+    System.out.println();
+
+    System.out.println("Buisness: " +sushiPlace.getName());
+    System.out.println("Owner: " + sushiPlace.getOwner());
+    System.out.println("Funds before taxes: $" +sushiPlace.getFunds());
+    sushiPlace.payTaxes();
+    System.out.println("Funds after taxes: " + sushiPlace.getFunds());
+    System.out.println();
+
+    Business.Employee sushiEmployee = sushiPlace.new Employee("Tina", "Waitress", 16);
+    sushiEmployee.printEmployeeDetails();
+  }
+}
